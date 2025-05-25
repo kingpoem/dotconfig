@@ -1,0 +1,196 @@
+# export env variable
+export VERILATOR_ROOT="/usr/local/bin"
+export SHIM="$HOME/.pyenv/shims"
+export VCPKG_ROOT="$HOME/app/vcpkg"
+export HEXO="$HOME/app/hexo/node_modules/.bin"
+export LOCAL="$HOME/.local/bin"
+export CXX="/usr/bin/g++"
+export BIN="/usr/local/bin"
+export CURL_CA_BUNDLE="/etc/ssl/certs/ca-certificates.crt"
+export PYENV_PLUGIN="$HOME/.pyenv/plugins"
+# export NINJA="/usr/bin/ninja"
+# export JAVAC_HOME="/usr/lib/jvm/java-23-openjdk/bin"
+# export QSYS_ROOTDIR="/home/poem/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/23.1/quartus/sopc_builder/bin"
+# export NPC_HOME=/home/poem/app/github/ysyx-workbench/npc
+# export AM_HOME=/home/poem/app/github/ysyx-workbench/abstract-machine
+# export NEMU_HOME=/home/poem/app/github/ysyx-workbench/nemu
+
+# ccache
+# export CC="ccache gcc"
+# export CXX="ccache g++"
+# export CCACHE_MAXSIZE=10G
+# export CCACHE="/usr/lib/ccache/bin"
+# export CCACHE_DIR=".ccache"
+
+# proxy
+export http_proxy="http://127.0.0.1:7897"
+export https_proxy="http://127.0.0.1:7897"
+# export GITHUB_PROXY="https://moeyy.cn/gh-proxy"
+
+# help seek exe; if not add them to PATH, then can not use them in command
+export PATH="$PATH:$VERILATOR_ROOT:$SHIM:$VCPKG_ROOT:$HEXO:$LOCAL:$CXX:$BIN:$CURL_CA_BUNDLE:$PYENV_PLUGIN"
+
+# env variable
+ZSH=/usr/share/oh-my-zsh/
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir -p $ZSH_CACHE_DIR
+fi
+
+# xmake
+test -f "/home/poem/.xmake/profile" && source "/home/poem/.xmake/profile"
+
+# auto start tmux
+if [ -z "$TMUX" ]
+then
+  tmux attach -t "1" || tmux new -s "1"
+fi
+
+# ZSH Theme
+# https://github.com/ohmyzsh/ohmyzsh/wiki/themes
+ZSH_THEME="agnoster"
+
+# change directories
+alias ..="cd .."
+alias ap="cd ~/app && eza -la"
+alias down="cd ~/Downloads && eza -la"
+alias github="cd ~/app/github && eza -la"
+alias ob="cd ~/app/obsidian"
+alias vsc="cd ~/app/vscode && eza -la"
+alias blog="cd ~/app/github/blog"
+alias qq="cd ~/app/github/qqmusic-api-cxx && nvim ."
+alias cpp="cd ~/app/vscode/CPP/ && nvim ."
+alias qt="cd ~/app/vscode/CPP/qt_demo/ && nvim ."
+alias py="cd ~/app/vscode/Python/ && nvim ."
+
+# daily use
+alias l="eza --long --all"
+alias make="make -j $(nproc)"
+alias open="xdg-open"
+alias vi="nvim"
+alias lg="lazygit"
+alias cl="sudo clear"
+alias q="exit"
+alias dmesg="sudo dmesg"
+alias del="rm -rf"
+alias mv="mv -i"
+alias his="history"
+alias hexo_="blog && hexo clean && hexo generate && hexo server"
+alias dot="chezmoi"
+alias cpp-format="cat ~/app/scripts/.clang-format > ./.clang-format"
+alias cmb="cmake -B build && cmake --build build"
+c() {
+    if [ -d "$1" ]; then
+        cd "$1" && eza -la
+    else
+        echo "目录不存在: $1"
+    fi
+}
+color_test() {
+  awk 'BEGIN{
+      for(col=0; col<256; col++) {
+          printf "\033[48;2;%d;%d;%dm", col,col,col
+          printf "%4d", col
+          printf "\033[0m"
+      }
+      printf "\n"
+  }'
+}
+flamegraph() {
+    # 参数校验
+    if [[ $# -eq 0 ]]; then
+        echo "Usage: flamegraph <executable>"
+        return 1
+    fi
+
+    # 设置输出文件名（默认与可执行文件同名）
+    local executable="$1"
+    local svg_name="${executable##*/}.svg"
+
+    # 执行性能采样并生成火焰图
+    perf record -F 99 -g -- "$executable" && \
+    perf script | /usr/bin/stackcollapse-perf.pl | /usr/bin/flamegraph.pl > "$svg_name"
+
+    # 清理临时文件（可选）
+    rm -f perf.data perf.unfold perf.folded
+
+    echo "FlameGraph generated: $svg_name"
+}
+
+# configuration
+
+## normal configuration
+alias zshc="nvim ~/.zshrc && source ~/.zshrc"
+alias omzc="nvim ~/.oh-my-zsh && source ~/.zshrc"
+alias vimc="nvim ~/.vimrc && source ~/.vimrc"
+alias tmuxc="nvim ~/.tmux.conf && source ~/.tmux.conf 2>/dev/null"
+alias gitc="nvim ~/.gitconfig"
+alias gdbc="nvim ~/.gdbinit"
+alias bashc="nvim ~/.bashrc"
+
+## cpp configuration
+alias Bcmake="cmake -B build"
+alias bcmake="cmake --build build 2>&1 | tee build/build.log"
+
+## pacman configuration
+alias qs="pacman -Qs"
+alias get="sudo pacman -S"
+alias syu="sudo pacman -Syu --quiet --noconfirm 2>/dev/null"
+alias ss="pacman -Ss"
+alias ql="pacman -Ql"
+alias pacmanc="sudo /home/poem/.local/bin/lvim /etc/pacman.conf"
+alias scc="sudo pacman -Scc --noconfirm && paru -Scc --noconfirm && sudo rm -rf /boot/initramfs-linux-fallback.img"
+
+## miniconda configuration
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
+alias acti="source /opt/miniconda3/bin/activate"
+alias act="conda activate"
+
+## docker configuration
+alias docker-start="sudo systemctl start docker.socket"
+alias docker-stop="sudo systemctl stop docker.socket"
+alias docker="sudo docker"
+
+alias rv64="riscv64-linux-gnu-gcc"
+alias tmuxn="tmux attach -t '1' || tmux new -s '1'"
+alias remake="rm -rf build && cmake -B build && cmake --build build -j $(nproc)"
+alias rebuild="cmake --build build -j $(nproc)"
+alias kills="tmux kill-session -t"
+alias make_llvm='cmake -DLLVM_ENABLE_PROJECTS="clang;lld;llvm" -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" ../llvm'
+alias difflog="make --debug=v > file1.log && make -d > file2.log && vimdiff file1.log file2.log && rm -rf file1.log file2.log"
+
+# plugins
+plugins=(
+    git
+    autojump
+    # zsh-syntax-highlighting
+    colorize
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# vi mode
+bindkey -v
+
+## show block or line
+function zle-keymap-select {
+    if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
+        echo -ne '\e[2 q'
+    elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} == '' ]] || [[ $1 == 'block' ]]; then
+        echo -ne '\e[6 q'
+    fi
+}
+
+## show -- NORMAL -- or -- INSERT --
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+
+zle -N zle-line-init      # 注册为Zsh行编辑的初始化函数
+zle -N zle-keymap-select  # 注册为Zsh行编辑模式改变时的回调函数
+
+setopt no_nomatch  
+# 如果使用通配符但没有匹配到任何文本 Zsh不会报错 而是保留原始的通配符文本
+
