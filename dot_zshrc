@@ -79,13 +79,7 @@ alias hexo_="blog && hexo clean && hexo generate && hexo server"
 alias dot="chezmoi"
 alias cpp-format="cat ~/app/scripts/.clang-format > ./.clang-format"
 alias cmb="cmake -B build && cmake --build build"
-c() {
-    if [ -d "$1" ]; then
-        cd "$1" && eza -la
-    else
-        echo "目录不存在: $1"
-    fi
-}
+alias e="x mankier e"
 color_test() {
   awk 'BEGIN{
       for(col=0; col<256; col++) {
@@ -127,6 +121,7 @@ alias tmuxc="nvim ~/.tmux.conf && source ~/.tmux.conf 2>/dev/null"
 alias gitc="nvim ~/.gitconfig"
 alias gdbc="nvim ~/.gdbinit"
 alias bashc="nvim ~/.bashrc"
+alias chec="nvim ~/.config/chezmoi/chezmoi.toml"
 
 ## cpp configuration
 alias Bcmake="cmake -B build"
