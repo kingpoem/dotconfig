@@ -1,0 +1,14 @@
+[init]
+	defaultBranch = main
+[user]
+	email = junqiwang93@gmail.com
+	name = poem
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	st = status -s
+	ll = log --oneline
+	last = log -1 HEAD --stat
+	cm = commit -m
+	rv = remote -v
+	d = diff
+	dv = difftool -t gvimdiff -y
