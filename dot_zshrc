@@ -114,13 +114,15 @@ flamegraph() {
 # configuration
 
 ## normal configuration
-alias zshc="nvim ~/.zshrc && source ~/.zshrc"
+# alias zshc="nvim ~/.zshrc && source ~/.zshrc"
+alias zshc="chezmoi edit ~/.zshrc --apply && source ~/.zshrc"
 alias omzc="nvim ~/.oh-my-zsh && source ~/.zshrc"
 alias vimc="nvim ~/.vimrc && source ~/.vimrc"
 alias tmuxc="nvim ~/.tmux.conf && source ~/.tmux.conf 2>/dev/null"
 alias gitc="nvim ~/.gitconfig"
 alias gdbc="nvim ~/.gdbinit"
 alias bashc="nvim ~/.bashrc"
+alias bashc="chezmoi edit ~/.zshrc --apply"
 alias chec="nvim ~/.config/chezmoi/chezmoi.toml"
 
 ## cpp configuration
