@@ -2,9 +2,9 @@
 	defaultBranch = main
 [user]
 	email = junqiwang93@gmail.com
-	name = poem
+	name = {{ .chezmoi.group }}
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg = log --color --graph --pretty=format{{ .chezmoi.pathListSeparator }}'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	st = status -s
 	ll = log --oneline
 	last = log -1 HEAD --stat
