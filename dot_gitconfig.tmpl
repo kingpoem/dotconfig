@@ -1,8 +1,8 @@
 [init]
 	defaultBranch = main
 [user]
-	email = junqiwang93@gmail.com
-	name = {{ .chezmoi.group }}
+	email = {{ .email }}
+	name = {{ .name }}
 [alias]
 	lg = log --color --graph --pretty=format{{ .chezmoi.pathListSeparator }}'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	st = status -s
