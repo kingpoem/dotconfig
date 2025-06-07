@@ -125,6 +125,7 @@ alias bashc="nvim ~/.bashrc"
 alias bashc="chezmoi edit ~/.zshrc --apply"
 alias chec="nvim ~/.config/chezmoi/chezmoi.toml"
 alias chezmoic="chezmoi edit-config"
+alias ipython="acti && act crystal13 && ipython"
 
 ## cpp configuration
 alias Bcmake="cmake -B build"
