@@ -158,6 +158,9 @@ alias kills="tmux kill-session -t"
 alias make_llvm='cmake -DLLVM_ENABLE_PROJECTS="clang;lld;llvm" -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" ../llvm'
 alias difflog="make --debug=v > file1.log && make -d > file2.log && vimdiff file1.log file2.log && rm -rf file1.log file2.log"
 
+# quick template
+alias cpp20="~/app/scripts/template-cpp-20.sh"
+
 # plugins
 plugins=(
     git
