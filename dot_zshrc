@@ -160,6 +160,7 @@ alias difflog="make --debug=v > file1.log && make -d > file2.log && vimdiff file
 
 # quick template
 alias cpp20="~/app/scripts/template-cpp-20.sh && cd test && cpp-format"
+alias s="cargo run"
 
 # plugins
 plugins=(
