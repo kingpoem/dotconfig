@@ -25,6 +25,7 @@ export NINJA="/usr/bin/ninja"
 # proxy
 export http_proxy="http://127.0.0.1:7897"
 export https_proxy="http://127.0.0.1:7897"
+export NO_PROXY="localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8"
 # export GITHUB_PROXY="https://moeyy.cn/gh-proxy"
 
 # help seek exe; if not add them to PATH, then can not use them in command
