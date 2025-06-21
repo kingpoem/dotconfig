@@ -82,7 +82,8 @@ alias dot="chezmoi"
 alias cpp-format="cat ~/app/scripts/.clang-format > ./.clang-format"
 alias cmb="cmake -B build && cmake --build build"
 alias e="x mankier e"
-alias copy="xclip -selection clipboard"
+# alias copy="xclip -selection clipboard"
+alias -g copy="| wl-copy"
 alias font="fc-cache -vf"
 color_test() {
   awk 'BEGIN{
