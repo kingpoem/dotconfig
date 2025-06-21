@@ -149,6 +149,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/app/scripts/autojump.sh
 source ~/app/scripts/start-project.sh
 source ~/app/scripts/flamegraph.sh
+source ~/app/scripts/color-test.sh
 
 # =========================== ZSH VI MODE ========================================
 # vi mode
