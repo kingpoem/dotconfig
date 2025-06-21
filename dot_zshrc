@@ -83,16 +83,6 @@ alias e="x mankier e"
 # alias copy="xclip -selection clipboard"
 alias -g copy="| wl-copy"
 alias font="fc-cache -vf"
-color_test() {
-  awk 'BEGIN{
-      for(col=0; col<256; col++) {
-          printf "\033[48;2;%d;%d;%dm", col,col,col
-          printf "%4d", col
-          printf "\033[0m"
-      }
-      printf "\n"
-  }'
-}
 
 # configuration
 
@@ -153,11 +143,14 @@ plugins=(
     colorize
 )
 
+# ======================= ZSH SCRIPT ACTIVATE ===============================
+
 source $ZSH/oh-my-zsh.sh
 source ~/app/scripts/autojump.sh
 source ~/app/scripts/start-project.sh
 source ~/app/scripts/flamegraph.sh
 
+# =========================== ZSH VI MODE ========================================
 # vi mode
 bindkey -v
 
@@ -180,6 +173,8 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init      # 注册为Zsh行编辑的初始化函数
 zle -N zle-keymap-select  # 注册为Zsh行编辑模式改变时的回调函数
 
-setopt no_nomatch  
+setopt no_nomatch
+# ====================================================================
+
 # 如果使用通配符但没有匹配到任何文本 Zsh不会报错 而是保留原始的通配符文本
 eval "$(curl -s https://get.x-cmd.com)"
