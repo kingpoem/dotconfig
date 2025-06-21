@@ -81,7 +81,7 @@ alias cpp-format="cat ~/app/scripts/clang-format-template > ./.clang-format"
 alias cmb="cmake -B build && cmake --build build"
 alias e="x mankier e"
 # alias copy="xclip -selection clipboard"
-alias -g copy="| wl-copy"
+alias -g copy="| col -b | wl-copy"
 alias font="fc-cache -vf"
 
 # configuration
