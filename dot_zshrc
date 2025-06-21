@@ -184,6 +184,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source ~/app/scripts/autojump.sh
 
 # vi mode
 bindkey -v
