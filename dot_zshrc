@@ -163,17 +163,6 @@ alias difflog="make --debug=v > file1.log && make -d > file2.log && vimdiff file
 
 # quick template
 alias cpp20="~/app/scripts/template-cpp-20.sh && cd test && cpp-format"
-function s() {
-  if [[ -f "Cargo.toml" ]]; then
-    echo "Detected Rust project 🦀"
-    cargo run
-  elif [[ -f "CMakeLists.txt" ]]; then
-    echo "Detected C++ project 💻"
-    cmake -Bbuild && cmake --build build && ./build/main
-  else
-    echo "Unknown project type 🙀"
-  fi
-}
 
 # plugins
 plugins=(
@@ -185,6 +174,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source ~/app/scripts/autojump.sh
+source ~/app/scripts/start-project.sh
 
 # vi mode
 bindkey -v
