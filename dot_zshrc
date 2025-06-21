@@ -82,6 +82,7 @@ alias cpp-format="cat ~/app/scripts/.clang-format > ./.clang-format"
 alias cmb="cmake -B build && cmake --build build"
 alias e="x mankier e"
 alias copy="xclip -selection clipboard"
+alias font="fc-cache -vf"
 color_test() {
   awk 'BEGIN{
       for(col=0; col<256; col++) {
