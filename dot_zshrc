@@ -156,6 +156,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source ~/app/scripts/autojump.sh
 source ~/app/scripts/start-project.sh
+source ~/app/scripts/flamegraph.sh
 
 # vi mode
 bindkey -v
