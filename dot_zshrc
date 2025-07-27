@@ -181,5 +181,5 @@ setopt no_nomatch
 # eval "$(curl -s https://get.x-cmd.com)"
 export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
-source ~/.config/zshrc.d/dots-hyprland.zsh
-source ~/.config/zshrc.d/auto-Hypr.sh
+# source ~/.config/zshrc.d/dots-hyprland.zsh
+# source ~/.config/zshrc.d/auto-Hypr.sh
