@@ -9,6 +9,7 @@ export BIN="/usr/local/bin"
 export CURL_CA_BUNDLE="/etc/ssl/certs/ca-certificates.crt"
 export PYENV_PLUGIN="$HOME/.pyenv/plugins"
 export NINJA="/usr/bin/ninja"
+export FREETYPE_PROPERTIES="cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"
 # export JAVAC_HOME="/usr/lib/jvm/java-23-openjdk/bin"
 # export QSYS_ROOTDIR="/home/poem/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/23.1/quartus/sopc_builder/bin"
 # export NPC_HOME=/home/poem/app/github/ysyx-workbench/npc
