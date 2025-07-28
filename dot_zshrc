@@ -63,7 +63,7 @@ alias cpp="cd ~/app/vscode/CPP/ && nvim ."
 alias qt="cd ~/app/vscode/CPP/qt_demo/ && nvim ."
 
 # daily use
-alias l="eza --long --all"
+alias l="eza -la"
 alias make="make -j $(nproc)"
 alias open="xdg-open"
 alias vi="nvim"
