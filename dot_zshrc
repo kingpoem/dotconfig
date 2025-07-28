@@ -51,6 +51,23 @@ test -f "/home/poem/.xmake/profile" && source "/home/poem/.xmake/profile"
 # https://github.com/ohmyzsh/ohmyzsh/wiki/themes
 # ZSH_THEME="agnoster"
 
+
+# plugins
+plugins=(
+    git
+    autojump
+    # zsh-syntax-highlighting
+    colorize
+)
+
+# ======================= ZSH SCRIPT ACTIVATE ===============================
+
+source $ZSH/oh-my-zsh.sh
+source ~/app/scripts/autojump.sh
+source ~/app/scripts/start-project.sh
+source ~/app/scripts/flamegraph.sh
+source ~/app/scripts/color-test.sh
+
 # change directories
 alias ..="cd .."
 alias ap="cd ~/app && eza -la"
@@ -139,22 +156,6 @@ alias difflog="make --debug=v > file1.log && make -d > file2.log && vimdiff file
 
 # quick template
 alias cpp20="~/app/scripts/template-cpp-20.sh && cd test && cpp-format"
-
-# plugins
-plugins=(
-    git
-    autojump
-    # zsh-syntax-highlighting
-    colorize
-)
-
-# ======================= ZSH SCRIPT ACTIVATE ===============================
-
-source $ZSH/oh-my-zsh.sh
-source ~/app/scripts/autojump.sh
-source ~/app/scripts/start-project.sh
-source ~/app/scripts/flamegraph.sh
-source ~/app/scripts/color-test.sh
 
 # =========================== ZSH VI MODE ========================================
 # vi mode
