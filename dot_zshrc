@@ -107,6 +107,7 @@ alias cursor="~/app/Cursor-1.1.3-x86_64.AppImage"
 # alias copy="xclip -selection clipboard"
 alias -g copy="| col -b | wl-copy"
 alias font="fc-cache -vf"
+alias tshark="sudo tshark"
 
 # configuration
 
