@@ -105,6 +105,7 @@ alias cmb="cmake -B build && cmake --build build"
 alias e="x mankier e"
 # alias copy="xclip -selection clipboard"
 alias -g copy="| col -b | wl-copy"
+alias -g back="| tee /tmp/back.txt"
 alias font="fc-cache -vf"
 
 # configuration
