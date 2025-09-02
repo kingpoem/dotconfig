@@ -155,7 +155,7 @@ alias docker="sudo docker"
 
 alias rv64="riscv64-linux-gnu-gcc"
 alias tmuxn="tmux attach -t '1' || tmux new -s '1'"
-alias remake="rm -rf build && cmake -B build && cmake --build build -j $(nproc)"
+alias remake="rm -rf build && cmake -Bbuild -DCMAKE_EXPORT_COMPILE_COMMANDS=ON && cmake --build build -j $(nproc)"
 alias rebuild="cmake --build build -j $(nproc)"
 alias kills="tmux kill-session -t"
 alias make_llvm='cmake -DLLVM_ENABLE_PROJECTS="clang;lld;llvm" -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" ../llvm'
