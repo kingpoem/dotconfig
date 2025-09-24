@@ -157,24 +157,12 @@ alias cpp20="~/app/scripts/template-cpp-20.sh && cd test && cpp-format"
 # vi mode
 bindkey -v
 
-## show block or line
-# function zle-keymap-select {
-#     if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
-#         echo -ne '\e[2 q'
-#     elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} == '' ]] || [[ $1 == 'block' ]]; then
-#         echo -ne '\e[6 q'
-#     fi
-# }
-
 ## show -- NORMAL -- or -- INSERT --
 function zle-line-init zle-keymap-select {
     RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
     RPS2=$RPS1
     zle reset-prompt
 }
-
-# zle -N zle-line-init      # 注册为Zsh行编辑的初始化函数
-# zle -N zle-keymap-select  # 注册为Zsh行编辑模式改变时的回调函数
 
 setopt no_nomatch
 # ====================================================================
