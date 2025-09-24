@@ -51,7 +51,6 @@ test -f "/home/poem/.xmake/profile" && source "/home/poem/.xmake/profile"
 plugins=(
     git
     autojump
-    # zsh-syntax-highlighting
     colorize
 )
 
