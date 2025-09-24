@@ -72,6 +72,8 @@ alias vsc="cd ~/app/vscode && eza -la"
 alias blog="cd ~/app/github/blog"
 alias cpp="cd ~/app/vscode/CPP/ && nvim ."
 alias qt="cd ~/app/vscode/CPP/qt_demo/ && nvim ."
+# cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+
 
 # daily use
 alias l="eza -la"
