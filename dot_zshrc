@@ -97,6 +97,7 @@ alias e="x mankier e"
 alias -g copy="| col -b | wl-copy"
 alias -g back="| tee /tmp/back.txt"
 alias font="fc-cache -vf"
+alias download="aria2c -x16 -s16 --min-split-size=1M -j1 -c --summary-interval=5"
 
 # configuration
 
