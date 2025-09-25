@@ -142,7 +142,6 @@ alias act="conda activate"
 ## docker configuration
 alias docker-start="sudo systemctl start docker.socket"
 alias docker-stop="sudo systemctl stop docker.socket"
-alias docker="sudo docker"
 
 alias rv64="riscv64-linux-gnu-gcc"
 alias tmuxn="tmux attach -t '1' || tmux new -s '1'"
