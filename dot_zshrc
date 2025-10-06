@@ -29,8 +29,8 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
 # proxy
-# export http_proxy="http://127.0.0.1:7897"
-# export https_proxy="http://127.0.0.1:7897"
+export http_proxy="http://127.0.0.1:7897"
+export https_proxy="http://127.0.0.1:7897"
 # export NO_PROXY="localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,::1"
 # export GITHUB_PROXY="https://moeyy.cn/gh-proxy"
 
