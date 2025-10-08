@@ -105,8 +105,8 @@ alias download="aria2c -x16 -s16 --min-split-size=1M -j1 -c --summary-interval=5
 # configuration
 
 ## normal configuration
-# alias zshc="nvim ~/.zshrc && source ~/.zshrc"
-alias zshc="chezmoi edit ~/.zshrc --apply && source ~/.zshrc"
+alias zshc="nvim ~/.zshrc && source ~/.zshrc"
+# alias zshc="chezmoi edit ~/.zshrc --apply && source ~/.zshrc"
 alias omzc="nvim ~/.oh-my-zsh && source ~/.zshrc"
 alias vimc="nvim ~/.vimrc && source ~/.vimrc"
 alias tmuxc="nvim ~/.tmux.conf && source ~/.tmux.conf 2>/dev/null"
