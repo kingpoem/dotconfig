@@ -76,7 +76,6 @@ alias del="rm -rf"
 alias mv="mv -i"
 alias his="history"
 alias hexo_="blog && hexo clean && hexo generate && hexo server"
-alias dot="chezmoi"
 alias cpp-format="cat ~/app/scripts/clang-format-template > ./.clang-format"
 alias addclangd='echo -e "# .clangd\nCompileFlags:\n  Remove: [-mno-direct-extern-access]" >> .clangd'
 alias cmb="cmake -B build && cmake --build build"
@@ -90,7 +89,7 @@ alias download="aria2c -x16 -s16 --min-split-size=1M -j1 -c --summary-interval=5
 # configuration
 
 ## normal configuration
-# alias zshc="nvim ~/.zshrc && source ~/.zshrc"
+# alias zshc="cp ~/.zshrc /tmp/zshrc && nvim ~/.zshrc && source ~/.zshrc"
 alias zshc="cp ~/.zshrc /tmp/zshrc && chezmoi edit ~/.zshrc --apply && source ~/.zshrc"
 alias omzc="nvim ~/.oh-my-zsh && source ~/.zshrc"
 alias vimc="nvim ~/.vimrc && source ~/.vimrc"
