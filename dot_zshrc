@@ -23,11 +23,6 @@ export FREETYPE_PROPERTIES="cff:no-stem-darkening=0 autofitter:no-stem-darkening
 # export CCACHE="/usr/lib/ccache/bin"
 # export CCACHE_DIR=".ccache"
 
-# 输入法
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS="@im=fcitx"
-
 # proxy
 export http_proxy="http://127.0.0.1:7897"
 export https_proxy="http://127.0.0.1:7897"
