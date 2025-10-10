@@ -76,7 +76,6 @@ alias cpp="cd ~/app/vscode/CPP/ && nvim ."
 alias qt="cd ~/app/vscode/CPP/qt_demo/ && nvim ."
 # cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 
-
 # daily use
 alias l="eza -la"
 alias make="make -j $(nproc)"
@@ -98,6 +97,7 @@ alias cmb="cmake -B build && cmake --build build"
 alias e="x mankier e"
 # alias copy="xclip -selection clipboard"
 alias -g copy="| col -b | wl-copy"
+alias last="fc -ln -1 | col -b | tee >(wl-copy)"
 alias -g back="| tee /tmp/back.txt"
 alias font="fc-cache -vf"
 alias download="aria2c -x16 -s16 --min-split-size=1M -j1 -c --summary-interval=5 -d=~/Downloads/"
@@ -106,7 +106,7 @@ alias download="aria2c -x16 -s16 --min-split-size=1M -j1 -c --summary-interval=5
 
 ## normal configuration
 alias zshc="nvim ~/.zshrc && source ~/.zshrc"
-# alias zshc="chezmoi edit ~/.zshrc --apply && source ~/.zshrc"
+alias zshc="cp ~/.zshrc /tmp/zshrc && chezmoi edit ~/.zshrc --apply && source ~/.zshrc"
 alias omzc="nvim ~/.oh-my-zsh && source ~/.zshrc"
 alias vimc="nvim ~/.vimrc && source ~/.vimrc"
 alias tmuxc="nvim ~/.tmux.conf && source ~/.tmux.conf 2>/dev/null"
