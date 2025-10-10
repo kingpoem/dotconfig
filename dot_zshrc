@@ -59,20 +59,10 @@ source ~/app/scripts/start-project.sh
 source ~/app/scripts/flamegraph.sh
 source ~/app/scripts/color-test.sh
 
-# change directories
-alias ..="cd .."
-alias ap="cd ~/app && eza -la"
-alias down="cd ~/Downloads && eza -la"
-alias github="cd ~/app/github && eza -la"
-alias ob="cd ~/app/obsidian"
-alias vsc="cd ~/app/vscode && eza -la"
-alias blog="cd ~/app/github/blog"
-alias cpp="cd ~/app/vscode/CPP/ && nvim ."
-alias qt="cd ~/app/vscode/CPP/qt_demo/ && nvim ."
 # cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 
-
 # daily use
+alias ..="cd .."
 alias l="eza -la"
 alias make="make -j $(nproc)"
 alias open="xdg-open"
