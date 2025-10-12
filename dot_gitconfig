@@ -1,0 +1,22 @@
+[init]
+	defaultBranch = main
+[user]
+	email = junqiwang93@gmail.com
+	name = poem
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ll = log --oneline
+	st = status -s
+	cm = commit -m
+	rv = remote -v
+    ba = branch -a
+    merge = merge --squash
+    clone = clone --jobs=16 --filter=blob:none --recurse-submodules
+    cl = clone --jobs=16 --filter=blob:none --recurse-submodules
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[core]
+	editor = nvim
