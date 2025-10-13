@@ -154,6 +154,10 @@ function zle-line-init zle-keymap-select {
     zle reset-prompt
 }
 
+mang() {
+    man "$1" | col -b > "/tmp/$1.txt" && xdg-open "/tmp/$1.txt"
+}
+
 setopt no_nomatch
 # ====================================================================
 
