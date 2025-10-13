@@ -155,7 +155,7 @@ function zle-line-init zle-keymap-select {
 }
 
 mang() {
-    man "$1" | col -b > "/tmp/$1.txt" && xdg-open "/tmp/$1.txt"
+    man "$1" | col -b > "/tmp/$1.txt" && google-chrome "/tmp/$1.txt"
 }
 
 setopt no_nomatch
