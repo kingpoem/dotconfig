@@ -154,6 +154,10 @@ function zle-line-init zle-keymap-select {
     zle reset-prompt
 }
 
+mang() {
+    man "$1" | col -b > /tmp/$1 && open "Google Chrome" /tmp/$1
+}
+
 setopt no_nomatch
 # ====================================================================
 
