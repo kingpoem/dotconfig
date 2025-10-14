@@ -24,13 +24,13 @@ export FREETYPE_PROPERTIES="cff:no-stem-darkening=0 autofitter:no-stem-darkening
 # export CCACHE_DIR=".ccache"
 
 # proxy
-# export http_proxy="http://127.0.0.1:7897"
-# export https_proxy="http://127.0.0.1:7897"
+export http_proxy="http://127.0.0.1:7897"
+export https_proxy="http://127.0.0.1:7897"
 # export all_proxy="http://127.0.0.1:7890"
 # export NO_PROXY="localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,::1"
 # export GITHUB_PROXY="https://moeyy.cn/gh-proxy"
-export http_proxy="http://192.168.43.1:7890"
-export https_proxy="http://192.168.43.1:7890"
+# export http_proxy="http://192.168.43.1:7890"
+# export https_proxy="http://192.168.43.1:7890"
 
 # help seek exe; if not add them to PATH, then can not use them in command
 export PATH="$PATH:$VERILATOR_ROOT:$SHIM:$VCPKG_ROOT:$HEXO:$LOCAL:$CXX:$BIN:$CURL_CA_BUNDLE:$PYENV_PLUGIN"
