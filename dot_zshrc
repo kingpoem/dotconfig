@@ -123,6 +123,9 @@ alias ql="pacman -Ql"
 alias pacmanc="sudo /home/poem/.local/bin/lvim /etc/pacman.conf"
 alias scc="sudo pacman -Scc --noconfirm && paru -Scc --noconfirm && sudo rm -rf /boot/initramfs-linux-fallback.img"
 
+## paru configuration
+alias paru="paru --skipreview --sudoloop"
+
 ## miniconda configuration
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 alias acti="source /opt/miniconda3/bin/activate"
