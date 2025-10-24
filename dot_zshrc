@@ -118,7 +118,7 @@ alias pacmanc="sudo /home/poem/.local/bin/lvim /etc/pacman.conf"
 alias scc="sudo pacman -Scc --noconfirm && paru -Scc --noconfirm && sudo rm -rf /boot/initramfs-linux-fallback.img"
 
 ## paru configuration
-alias paru="paru -Syu --skipreview --sudoloop --clean --noconfirm"
+alias paru="paru -Syu --skipreview --sudoloop --noconfirm"
 
 ## miniconda configuration
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
