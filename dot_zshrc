@@ -16,13 +16,6 @@ export FREETYPE_PROPERTIES="cff:no-stem-darkening=0 autofitter:no-stem-darkening
 # export AM_HOME=/home/poem/app/github/ysyx-workbench/abstract-machine
 # export NEMU_HOME=/home/poem/app/github/ysyx-workbench/nemu
 
-# ccache
-# export CC="ccache gcc"
-# export CXX="ccache g++"
-# export CCACHE_MAXSIZE=10G
-# export CCACHE="/usr/lib/ccache/bin"
-# export CCACHE_DIR=".ccache"
-
 # proxy
 # export http_proxy="http://127.0.0.1:7890"
 # export https_proxy="http://127.0.0.1:7890"
@@ -125,7 +118,7 @@ alias pacmanc="sudo /home/poem/.local/bin/lvim /etc/pacman.conf"
 alias scc="sudo pacman -Scc --noconfirm && paru -Scc --noconfirm && sudo rm -rf /boot/initramfs-linux-fallback.img"
 
 ## paru configuration
-alias paru="paru -Syu --skipreview --sudoloop -cc --noconfirm"
+alias paru="paru -Syu --skipreview --sudoloop --clean --noconfirm"
 
 ## miniconda configuration
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
