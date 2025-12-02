@@ -82,6 +82,7 @@ alias font="fc-cache -vf"
 alias fc="fc -s"
 alias late="fc -l -1 | col -b | tee >(wl-copy)"
 alias download="aria2c -x16 -s16 --min-split-size=1M -j16 -c --summary-interval=5 -d=~/Downloads/"
+alias cursor="/home/poem/app/Cursor-2.1.46-x86_64.AppImage"
 
 # configuration
 
