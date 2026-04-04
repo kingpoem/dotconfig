@@ -17,9 +17,9 @@ export FREETYPE_PROPERTIES="cff:no-stem-darkening=0 autofitter:no-stem-darkening
 # export NEMU_HOME=/home/poem/app/github/ysyx-workbench/nemu
 
 # proxy
-# export http_proxy="http://127.0.0.1:10808"
-# export https_proxy="http://127.0.0.1:10808"
-# export all_proxy="socks5://127.0.0.1:10808"
+export http_proxy="http://127.0.0.1:10808"
+export https_proxy="http://127.0.0.1:10808"
+export all_proxy="socks5://127.0.0.1:10808"
 # export NO_PROXY="localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,::1"
 # export GITHUB_PROXY="https://moeyy.cn/gh-proxy"
 # export http_proxy="http://192.168.43.1:7890"
